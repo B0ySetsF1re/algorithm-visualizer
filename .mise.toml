@@ -1,0 +1,18 @@
+[tools]
+node = "24"
+
+[tasks.dev]
+description = "Start development server"
+run = "npm run dev"
+
+[tasks.build]
+description = "Build for production"
+run = "npm run build"
+
+[tasks.start]
+description = "Start production server"
+run = "npm start"
+
+[tasks.lint]
+description = "Run ESLint"
+run = "npm run lint"
