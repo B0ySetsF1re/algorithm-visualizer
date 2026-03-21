@@ -19,6 +19,7 @@
 
 # production
 /build
+cdk.out
 
 # misc
 .DS_Store
