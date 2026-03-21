@@ -1,6 +1,7 @@
-import * as cdk from 'aws-cdk-lib';
+import { App } from 'aws-cdk-lib';
+
 import { AlgorithmVisualizerStack } from './stack';
 
-const app = new cdk.App();
+const app = new App();
 
 new AlgorithmVisualizerStack(app, 'AlgorithmVisualizerStack');
