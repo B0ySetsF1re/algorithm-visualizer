@@ -1,0 +1,33 @@
+name: CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v6.0.2
+
+      - name: Conventional Changelog Action
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v6.3.0
+        with:
+          skip-on-empty: 'false'
+          git-message: '{version}'
+          github-token: ${{ secrets.github_token }}
+
+      - name: Create Release
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        run: |
+          gh release create ${{ steps.changelog.outputs.tag }} \
+            --title "${{ steps.changelog.outputs.tag }}" \
+            --notes "${{ steps.changelog.outputs.clean_changelog }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
