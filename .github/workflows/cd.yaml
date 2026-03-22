@@ -63,3 +63,5 @@ jobs:
 
       - name: Deploy
         run: npx cdk deploy --require-approval never
+        env:
+          ENVIRONMENT: ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
