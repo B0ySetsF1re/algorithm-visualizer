@@ -1,3 +1,7 @@
+## [0.1.9](https://github.com/B0ySetsF1re/algorithm-visualizer/compare/v0.1.8...v0.1.9) (2026-03-22)
+
+
+
 ## [0.1.8](https://github.com/B0ySetsF1re/algorithm-visualizer/compare/v0.1.7...v0.1.8) (2026-03-22)
 
 
@@ -11,10 +15,6 @@
 
 
 ## [0.1.5](https://github.com/B0ySetsF1re/algorithm-visualizer/compare/v0.1.4...v0.1.5) (2026-03-22)
-
-
-
-## [0.1.4](https://github.com/B0ySetsF1re/algorithm-visualizer/compare/v0.1.3...v0.1.4) (2026-03-22)
 
 
 
