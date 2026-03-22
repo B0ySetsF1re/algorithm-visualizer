@@ -27,7 +27,7 @@ jobs:
         run: npm run lint
 
       - name: Check vulnerabilities
-        run: npm audit
+        run: npm audit --audit-level=high
 
       - name: Build
         run: npm run build
