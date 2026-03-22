@@ -20,6 +20,7 @@ jobs:
           skip-on-empty: 'false'
           git-message: '{version}'
           github-token: ${{ secrets.github_token }}
+          preset: "conventionalcommits"
 
       - name: Create Release
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
