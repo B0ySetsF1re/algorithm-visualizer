@@ -7,8 +7,8 @@ on:
     branches: [main, dev]
 
 jobs:
-  build:
-    name: Lint and build
+  smoke-checks:
+    name: Smoke checks
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
