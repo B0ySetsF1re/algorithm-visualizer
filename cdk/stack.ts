@@ -6,11 +6,18 @@ import { S3BucketOrigin } from 'aws-cdk-lib/aws-cloudfront-origins';
 import { Construct } from 'constructs';
 import { join } from 'node:path';
 
+type AlgorithmVisualizerStackProps = StackProps & {
+  readonly environment: string;
+}
+
 export class AlgorithmVisualizerStack extends Stack {
-  constructor(scope: Construct, id: string, props?: StackProps) {
+  constructor(scope: Construct, id: string, props: AlgorithmVisualizerStackProps) {
     super(scope, id, props);
 
+    const { environment } = props;
+
     const bucket = new Bucket(this, 'StaticSiteBucket', {
+      bucketName: `algorithm-visualizer-${environment}`,
       blockPublicAccess: BlockPublicAccess.BLOCK_ALL,
       removalPolicy: RemovalPolicy.DESTROY,
       autoDeleteObjects: true,

@@ -4,4 +4,6 @@ import { AlgorithmVisualizerStack } from './stack';
 
 const app = new App();
 
-new AlgorithmVisualizerStack(app, 'AlgorithmVisualizerStack');
+const environment = process.env.ENVIRONMENT ?? 'dev';
+
+new AlgorithmVisualizerStack(app, `AlgorithmVisualizerStack-${environment}`, { environment });
