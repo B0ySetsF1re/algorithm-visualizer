@@ -27,7 +27,8 @@ jobs:
         run: |
           gh release create ${{ steps.changelog.outputs.tag }} \
             --title "${{ steps.changelog.outputs.tag }}" \
-            --notes "${{ steps.changelog.outputs.clean_changelog }}"
+            --notes "${{ steps.changelog.outputs.clean_changelog }}" \
+            ${{ vars.DRAFT_RELEASE == 'true' && '--draft' || '' }}
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
 
