@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(npm run lint *)",
+      "Bash(npm run build *)",
+      "Bash(npm audit *)",
+      "Bash(npm view *)"
+    ],
+    "ask": [
+      "Bash(npm audit fix *)"
+    ],
+    "deny": [
+      "Bash(cdk deploy *)",
+      "Bash(cdk destroy *)",
+      "Bash(npx cdk deploy *)",
+      "Bash(npx cdk destroy *)"
+    ]
+  }
+}
