@@ -31,8 +31,13 @@ export class AlgorithmVisualizerStack extends Stack {
       defaultRootObject: 'index.html',
       errorResponses: [
         {
+          httpStatus: 403,
+          responseHttpStatus: 404,
+          responsePagePath: '/404.html',
+        },
+        {
           httpStatus: 404,
-          responseHttpStatus: 200,
+          responseHttpStatus: 404,
           responsePagePath: '/404.html',
         },
       ],
