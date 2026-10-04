@@ -44,8 +44,7 @@ next-env.d.ts
 # IDEs
 .vscode/*
 
-# docs
-/docs
-
 # LLMs
-.claude/*
+.claude/settings.local.json
+.claude/worktrees/
+CLAUDE.local.md
